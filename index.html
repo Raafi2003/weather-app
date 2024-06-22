@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="app.js" defer></script>
+    <style>
+        #outer-div{
+            border-style:none;
+            width: 500px;
+            height: 500px;
+            margin-top: 40px;
+            border-radius: 20px;
+            background: #62bee5;
+        }#body{
+            background: #7b7089;
+        }#weather-image{
+            border-style: solid;
+            border-color: white;
+            border-radius: 20px;
+            margin-top: 100px;
+            margin-left: 150px;
+            margin-right:150px;
+            padding-top:100px;
+        }#search-box-div{
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 28px;
+            background-color: #e1eaeb;
+            width:max-content;
+            display: inline-flex;
+            align-items: center;
+            transition: box-shadow 0.35s;
+        }
+        #search-bar{
+            font-size: 16px;
+            font-family: 'Lexend',sans-serif;
+            color: black;
+            margin-left: 14px;
+            margin-right: 14px;
+            border: none;
+            outline: none; 
+            background: transparent;
+            width: 200px;
+            
+        }#search-box-div:focus-within{
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+        #search-bar::placeholder,
+        .search-icon,.cancel-icon{
+            color: rgb(0, 0, 0, 0.35)
+        }.cancel-icon{
+            border:none;
+            background: transparent;
+        }.search-icon{
+            border:none;
+            background: transparent;
+        }#weather-image{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body id="body">
+    <center>
+        <div id="outer-div">
+            <span></span>
+            <div id="search-box-div">
+                <button class="search-icon material-symbols-outlined" onclick="searchHandler(document.getElementById('search-bar').value)">search</button>
+                <input type="text" name="city-name" id="search-bar" placeholder="Enter city">
+                <button class="cancel-icon material-symbols-outlined" onclick="clear_input()">close</button>
+            </div>
+            <div id="place-div">
+                <p id="place-text">Place, Country</p>
+            </div>
+            <div id="weather-image">
+                <img src="dai.png">
+            </div>
+            <div id="result-div">
+                <p id="temperature">Temperature: </p>
+                <p id="humidity">Humidity: </p>
+                <p id="wind">wind: </p>
+                
+            </div>
+        </div>
+    </center>
+    <script>
+        
+    </script>
+</body>
+</html>
